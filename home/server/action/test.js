@@ -13,6 +13,11 @@ module.exports = function(req, res, next){
     lbsModel.search(req.query.name, req.query.region)
         // .then(res.json.bind(res))
         .then(function (data) {
+            yog.log.debug("yog.log.debug");
+            yog.log.trace("yog.log.trace");
+            yog.log.notice("yog.log.notice");
+            yog.log.warning("yog.log.warning");
+            yog.log.fatal("yog.log.fatal");
             res.render('home/page/test.tpl', {
                 name: 'test page name',
                 hope: 'a bunche of money',
